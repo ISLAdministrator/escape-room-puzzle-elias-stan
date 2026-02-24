@@ -5,10 +5,13 @@ You can change it, add to it, or delete it.
 */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Monospace;Courier New
   background-color: #111;
-  color: white;
+  color: #FFFFFF;
   padding: 20px;
+  .highlight {
+    background-color: black;
+  }
 }
 
 button {
