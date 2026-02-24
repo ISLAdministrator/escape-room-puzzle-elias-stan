@@ -5,12 +5,12 @@ You can change it, add to it, or delete it.
 */
 
 body {
-  font-family: Monospace;Courier New
+  font-family: Monospace;Courier New;
   background-color: #111;
-  color: #FFFFFF;
+  color: rgb(255, 255, 255);
   padding: 20px;
   .highlight {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
   }
 }
 
