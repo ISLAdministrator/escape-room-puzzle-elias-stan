@@ -15,3 +15,11 @@ button {
   padding: 10px;
   font-size: 16px;
 }
+
+body {
+  background-image: url('Design Backround.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
