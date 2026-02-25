@@ -25,4 +25,18 @@ body {
   background-position: center;
   height: 100vh;
   margin: 0;
+  font-family: Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+#room1-text-box {
+  background-color: #22d3ee;
+  /* This is the ISL Cyan-400 brand color! */
+  padding: 20px;
+  /* This adds space inside the square */
+  width: 300px;
+  /* This makes it a specific size */
+  border: 2px solid #a78bfa;
+  /* Adding a Violet-400 border for style */
 }
