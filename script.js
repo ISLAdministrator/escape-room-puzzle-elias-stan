@@ -7,6 +7,12 @@ console.log("Script loaded");
 const button = document.getElementById("button");
 const output = document.getElementById("output");
 
-button.addEventListener("click", function () {
-  output.textContent = "Loading Challenge.";
+
+// 1. Link the HTML elements to JavaScript variables
+const introBox = document.getElementById('sciencelab-intro-screen');
+const continueBtn = document.getElementById('sciencelab-continue-btn');
+
+// 2. Make the magic happen on click
+continueBtn.addEventListener('click', function() {
+  introBox.style.display = 'none';
 });
