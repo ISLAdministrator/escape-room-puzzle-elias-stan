@@ -4,15 +4,14 @@ console.log("Script loaded");
 // you can use it, expand on it, or delete it
 // that all depends on your team's plan.
 
-const button = document.getElementById("button");
-const output = document.getElementById("output");
-
-
-// 1. Link the HTML elements to JavaScript variables
 const introBox = document.getElementById('sciencelab-intro-screen');
+const puzzleBox = document.getElementById('sciencelab-puzzle-screen');
 const continueBtn = document.getElementById('sciencelab-continue-btn');
 
-// 2. Make the magic happen on click
 continueBtn.addEventListener('click', function() {
+  // 1. Hide the intro
   introBox.style.display = 'none';
+  
+  // 2. Show the new text
+  puzzleBox.style.display = 'block';
 });
