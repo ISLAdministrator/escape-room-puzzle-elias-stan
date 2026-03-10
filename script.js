@@ -1,19 +1,36 @@
-console.log("Script loaded");
-
-// 1. Get all our elements from the HTML
 const introBox = document.getElementById('sciencelab-intro-screen');
 const puzzleBox = document.getElementById('sciencelab-puzzle-screen');
+const gameCanvas = document.getElementById('sciencelab-game-canvas');
 const continueBtn = document.getElementById('sciencelab-continue-btn');
 const startBtn = document.getElementById('js-start-btn');
+const countNum = document.getElementById('sciencelab-count-num');
+const statusText = document.getElementById('reactor-status');
 
-// 2. Click "Continue" -> Show the instructions and the Start button
-continueBtn.addEventListener('click', function() {
-  introBox.style.display = 'none';
-  puzzleBox.style.display = 'block';
+let leversFound = 0;
+
+continueBtn.addEventListener('click', () => {
+    introBox.style.display = 'none';
+    puzzleBox.style.display = 'block';
 });
 
-// 3. Click "Start" -> Hide everything so only the background remains
-startBtn.addEventListener('click', function() {
-  puzzleBox.style.display = 'none';
-  console.log("Game started! Screen is now blank.");
+startBtn.addEventListener('click', () => {
+    puzzleBox.style.display = 'none';
+    gameCanvas.style.display = 'block';
 });
+
+function handleLeverClick(e) {
+    leversFound++;
+    countNum.innerText = leversFound;
+    
+    // Hide the lever so it can't be clicked again
+    e.target.style.display = 'none';
+    
+    if (leversFound === 4) {
+        statusText.style.display = 'block';
+    }
+}
+
+document.getElementById('lever1').addEventListener('click', handleLeverClick);
+document.getElementById('lever2').addEventListener('click', handleLeverClick);
+document.getElementById('lever3').addEventListener('click', handleLeverClick);
+document.getElementById('lever4').addEventListener('click', handleLeverClick);
