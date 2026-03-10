@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/pixelify-sans" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Escape Room</h1>
+
+    <div id="sciencelab-intro-screen">
+        <p><mark class="highlight">You push open the door to the science lab... To stabilise the container, you’ll need to understand what’s causing the reaction — and how to slow it down.</mark></p>
+        <button id="sciencelab-continue-btn">Continue</button>
+    </div>
+
+    <div id="sciencelab-puzzle-screen" style="display: none;">
+        <h2>The Mystery Deepens...</h2>
+        <p>Quick! Find the 4 levers in the room in order to stop the reactor from blowing up.</p>
+        <button id="js-start-btn">Start</button>
+    </div>
+
+    <div id="sciencelab-game-canvas" style="display: none;">
+        <div id="sciencelab-counter">Levers Found: <span id="sciencelab-count-num">0</span>/4</div>
+
+        <div id="lever1" class="hotspot"></div>
+        <div id="lever2" class="hotspot"></div>
+        <div id="lever3" class="hotspot"></div>
+        <div id="lever4" class="hotspot"></div>
+
+        <div id="reactor-status" style="display: none;">
+            <h1>REACTOR STABILISED</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body> 
+</html>

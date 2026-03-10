@@ -1,6 +1,63 @@
+<<<<<<< HEAD
 /*
 This is a CSS comment :) Text just for humans, it is not part of the code
 Below is basic CSS styling.
 You can change it, add to it, or delete it.
 */
 
+=======
+>>>>>>> 20d0477a78b44256458478d4a6eabf0c72a5885f
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-align: center;
+}
+
+#sciencelab-game-canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('Option 2 B2 (2).png');
+    background-size: 100% 100%; /* Forces the image to fit the math */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sciencelab-counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border: 2px solid #00ff00;
+}
+
+.hotspot {
+    position: absolute;
+    width: 70px; 
+    height: 70px;
+    background-color: rgba(0, 255, 0, 0.3); /* Change 0.3 to 0.0 to make invisible */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Positioned using your X and Y coordinates */
+#lever1 { left: 47.6%; top: 35.6%; } /* x: 572, y: 285 */
+#lever2 { left: 9.1%; top: 9.8%; }   /* x: 109, y: 79 */
+#lever3 { left: 92.0%; top: 51.0%; }  /* x: 1104, y: 408 */
+#lever4 { left: 5.0%; top: 47.0%; }   /* x: 60, y: 376 */
+
+#reactor-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border: 4px solid #00ff00;
+    color: #00ff00;
+    z-index: 100;
+}
