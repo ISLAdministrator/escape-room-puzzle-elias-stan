@@ -63,3 +63,9 @@ body {
     z-index: 100;
     box-shadow: 0 0 20px #00ff00;
 }
+#clue-letter {
+    font-size: 80px;      /* Makes it nice and big */
+    margin: 10px 0 0 0;   /* Adds a little space above it */
+    color: #00ff00;       /* Neon green */
+    text-shadow: 0 0 15px #00ff00; /* Makes it glow */
+}
