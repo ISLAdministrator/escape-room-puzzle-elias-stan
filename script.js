@@ -33,7 +33,10 @@ function handleLeverClick(e) {
     if (leversFound === 4) {
         statusText.style.display = 'block';
         
-        // OPTIONAL: Pause music or lower volume when they win
+        // THIS LINE CHANGES THE BACKGROUND:
+        gameCanvas.style.backgroundImage = "url('Option 2 B2 (4).png')";
+        
+        // Stop the music
         bgMusic.pause(); 
     }
 }
