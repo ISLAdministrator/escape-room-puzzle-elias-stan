@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-/*
-This is a CSS comment :) Text just for humans, it is not part of the code
-Below is basic CSS styling.
-You can change it, add to it, or delete it.
-*/
-
-=======
->>>>>>> 20d0477a78b44256458478d4a6eabf0c72a5885f
 body {
     margin: 0;
-    background-color: black;
+    background-color: #0a0a0a;
     color: white;
     font-family: 'Pixelify Sans', sans-serif;
     text-align: center;
+    overflow: hidden;
 }
 
 #sciencelab-game-canvas {
@@ -20,7 +12,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: url('Option 2 B2 (2).png');
-    background-size: 100% 100%; /* Forces the image to fit the math */
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -29,27 +21,36 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 30px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
     border: 2px solid #00ff00;
+    color: #00ff00;
 }
 
 .hotspot {
     position: absolute;
-    width: 70px; 
-    height: 70px;
-    background-color: rgba(0, 255, 0, 0.3); /* Change 0.3 to 0.0 to make invisible */
+    /* SMALLER BUTTON SIZE */
+    width: 40px; 
+    height: 40px;
+    background-color: rgba(0, 255, 0, 0.0); /* Green tint for testing */
     cursor: pointer;
     border-radius: 50%;
+    /* This ensures the center of the small circle hits your X/Y exactly */
+    transform: translate(-50%, -50%); 
 }
 
-/* Positioned using your X and Y coordinates */
-#lever1 { left: 47.6%; top: 35.6%; } /* x: 572, y: 285 */
-#lever2 { left: 9.1%; top: 9.8%; }   /* x: 109, y: 79 */
-#lever3 { left: 92.0%; top: 51.0%; }  /* x: 1104, y: 408 */
-#lever4 { left: 5.0%; top: 47.0%; }   /* x: 60, y: 376 */
+/* Lever 1: The small switch on the far left wall (Red circle 1) */
+#lever1 { left: 5%; top: 45%; } 
 
+/* Lever 2: The tile on the ceiling (Red circle 2) */
+#lever2 { left: 26.5%; top: 10%; }   
+
+/* Lever 3: The middle-right hanging handle (Red circle 3) */
+#lever3 { left: 58%; top: 35%; }  
+
+/* Lever 4: The item on the far desk by the window (Red circle 4) */
+#lever4 { left: 74.5%; top: 50%; }
 #reactor-status {
     position: absolute;
     top: 50%;
@@ -60,4 +61,5 @@ body {
     border: 4px solid #00ff00;
     color: #00ff00;
     z-index: 100;
+    box-shadow: 0 0 20px #00ff00;
 }

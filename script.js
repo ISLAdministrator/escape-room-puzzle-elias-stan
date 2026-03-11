@@ -6,6 +6,9 @@ const startBtn = document.getElementById('js-start-btn');
 const countNum = document.getElementById('sciencelab-count-num');
 const statusText = document.getElementById('reactor-status');
 
+// ADD THIS LINE:
+const bgMusic = document.getElementById('bg-music');
+
 let leversFound = 0;
 
 continueBtn.addEventListener('click', () => {
@@ -16,21 +19,27 @@ continueBtn.addEventListener('click', () => {
 startBtn.addEventListener('click', () => {
     puzzleBox.style.display = 'none';
     gameCanvas.style.display = 'block';
+    
+    // ADD THIS LINE TO START MUSIC:
+    bgMusic.play();
 });
 
 function handleLeverClick(e) {
     leversFound++;
     countNum.innerText = leversFound;
     
-    // Hide the lever so it can't be clicked again
     e.target.style.display = 'none';
     
     if (leversFound === 4) {
         statusText.style.display = 'block';
+        
+        // OPTIONAL: Pause music or lower volume when they win
+        bgMusic.pause(); 
     }
 }
 
-document.getElementById('lever1').addEventListener('click', handleLeverClick);
-document.getElementById('lever2').addEventListener('click', handleLeverClick);
-document.getElementById('lever3').addEventListener('click', handleLeverClick);
-document.getElementById('lever4').addEventListener('click', handleLeverClick);
+// Applying the listener to all levers
+const levers = [lever1, lever2, lever3, lever4];
+levers.forEach(lever => {
+    lever.addEventListener('click', handleLeverClick);
+});
