@@ -1,12 +1,48 @@
-console.log("Script loaded");
+const introBox = document.getElementById('sciencelab-intro-screen');
+const puzzleBox = document.getElementById('sciencelab-puzzle-screen');
+const gameCanvas = document.getElementById('sciencelab-game-canvas');
+const continueBtn = document.getElementById('sciencelab-continue-btn');
+const startBtn = document.getElementById('js-start-btn');
+const countNum = document.getElementById('sciencelab-count-num');
+const statusText = document.getElementById('reactor-status');
 
-// below is basic example code for using a button
-// you can use it, expand on it, or delete it
-// that all depends on your team's plan.
+// ADD THIS LINE:
+const bgMusic = document.getElementById('bg-music');
 
-const button = document.getElementById("button");
-const output = document.getElementById("output");
+let leversFound = 0;
 
-button.addEventListener("click", function () {
-  output.textContent = "JavaScript is working.";
+continueBtn.addEventListener('click', () => {
+    introBox.style.display = 'none';
+    puzzleBox.style.display = 'block';
+});
+
+startBtn.addEventListener('click', () => {
+    puzzleBox.style.display = 'none';
+    gameCanvas.style.display = 'block';
+    
+    // ADD THIS LINE TO START MUSIC:
+    bgMusic.play();
+});
+
+function handleLeverClick(e) {
+    leversFound++;
+    countNum.innerText = leversFound;
+    
+    e.target.style.display = 'none';
+    
+    if (leversFound === 4) {
+        statusText.style.display = 'block';
+        
+        // THIS LINE CHANGES THE BACKGROUND:
+        gameCanvas.style.backgroundImage = "url('Option 2 B2 (4).png')";
+        
+        // Stop the music
+        bgMusic.pause(); 
+    }
+}
+
+// Applying the listener to all levers
+const levers = [lever1, lever2, lever3, lever4];
+levers.forEach(lever => {
+    lever.addEventListener('click', handleLeverClick);
 });
