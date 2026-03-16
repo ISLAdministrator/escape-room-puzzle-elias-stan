@@ -1,31 +1,41 @@
-<!--This is an HTML Comment, text just for humans :) It is not part of your code.
-Good coders use comments frequently to stay organized and communicate with collaborators.
-
-The code below is basic HTML for your puzzle.
-You can edit it, add to it, and delete parts of it.
-
-DO NOT let AI code for you!!
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Escape Room</title>
-  <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/pixelify-sans" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Science Lab Escape</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Escape Room</h1>
 
-  <h1>Escape Room</h1>
+    <div id="sciencelab-intro-screen">
+        <p><mark class="highlight">You push open the door to the science lab and immediately feel something is wrong. The usual hum of equipment is louder, harsher — almost angry. On one of the benches, a sealed container glows faintly, pulsing in uneven bursts of light. Warning symbols flash on a nearby monitor: “REACTIVITY LEVELS UNSTABLE.” A log scrolls across the screen, filled with scientific notes about radiation and energy release. Some lines are highlighted, repeating the same idea over and over: rate, exposure, control. Whoever was here before didn’t finish their work. If the radiation keeps releasing energy this fast, something bad is going to happen. To stabilise the container, you’ll need to understand what’s causing the reaction — and how to slow it down. You must find the 4 manual override levers to prevent a meltdown.</mark></p>
+        <button id="sciencelab-continue-btn">Continue</button>
+    </div>
 
-  <p>
-    Write the story of your escape room here.
-  </p>
+    <div id="sciencelab-puzzle-screen" style="display: none;">
+        <h2>System Alert</h2>
+        <p>Locate all 4 levers hidden in the room.</p>
+        <button id="js-start-btn">Start</button>
+    </div>
 
-  <button id="button">Click me</button>
+    <div id="sciencelab-game-canvas" style="display: none;">
+        <div id="sciencelab-counter">Levers Found: <span id="sciencelab-count-num">0</span>/4</div>
 
-  <p id="output"></p>
+        <div id="lever1" class="hotspot"></div>
+        <div id="lever2" class="hotspot"></div>
+        <div id="lever3" class="hotspot"></div>
+        <div id="lever4" class="hotspot"></div>
 
-  <script src="script.js"></script>
-</body>
+       <div id="reactor-status" style="display: none;">
+    <h1>REACTOR STABILISED</h1>
+    <p>The readings suddenly drop. The pulsing light steadies, then fades to a safe, dull glow. “REACTIVITY NORMALISED,” the monitor confirms. A final line appears beneath the data: “LANGUAGE ANALYSIS REQUIRED — ROUTE REPORT TO EAL CLASSROOM.”  Under the text is one letter: D. Could this be important later? With the lab quiet again, you back away from the container and head down the hallway, hoping the worst is over. <a href="https://isladministrator.github.io/escape-room-puzzle-roman-1/">Next Escape Room</a></p>
+    
+    <h2 id="clue-letter">D</h2>
+</div>
+   <audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body> 
 </html>

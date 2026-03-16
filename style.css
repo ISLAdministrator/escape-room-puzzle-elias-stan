@@ -1,17 +1,71 @@
-/*
-This is a CSS comment :) Text just for humans, it is not part of the code
-Below is basic CSS styling.
-You can change it, add to it, or delete it.
-*/
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: white;
-  padding: 20px;
+    margin: 0;
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-align: center;
+    overflow: hidden;
 }
 
-button {
-  padding: 10px;
-  font-size: 16px;
+#sciencelab-game-canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('Option 2 B2 (1).png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sciencelab-counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+
+.hotspot {
+    position: absolute;
+    /* SMALLER BUTTON SIZE */
+    width: 40px; 
+    height: 40px;
+    background-color: rgba(0, 255, 0, 0.0); /* Green tint for testing */
+    cursor: pointer;
+    border-radius: 50%;
+    /* This ensures the center of the small circle hits your X/Y exactly */
+    transform: translate(-50%, -50%); 
+}
+
+/* Lever 1: The small switch on the far left wall (Red circle 1) */
+#lever1 { left: 5%; top: 45%; } 
+
+/* Lever 2: The tile on the ceiling (Red circle 2) */
+#lever2 { left: 26.5%; top: 10%; }   
+
+/* Lever 3: The middle-right hanging handle (Red circle 3) */
+#lever3 { left: 58%; top: 35%; }  
+
+/* Lever 4: The item on the far desk by the window (Red circle 4) */
+#lever4 { left: 74.5%; top: 50%; }
+#reactor-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border: 4px solid #00ff00;
+    color: #00ff00;
+    z-index: 100;
+    box-shadow: 0 0 20px #00ff00;
+}
+#clue-letter {
+    font-size: 80px;      /* Makes it nice and big */
+    margin: 10px 0 0 0;   /* Adds a little space above it */
+    color: #00ff00;       /* Neon green */
+    text-shadow: 0 0 15px #00ff00; /* Makes it glow */
 }
